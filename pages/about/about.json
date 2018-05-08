@@ -1,0 +1,7 @@
+{
+  "disableScroll": true,
+  "navigationBarTitleText": "小表白",
+  "usingComponents": {
+    "detail": "/components/detail/detail"
+  }
+}

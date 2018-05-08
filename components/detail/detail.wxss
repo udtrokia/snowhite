@@ -1,0 +1,5 @@
+/* components/detail.wxss */
+.prompt{
+  font-size: 0.6rem;
+  color: #999;
+}

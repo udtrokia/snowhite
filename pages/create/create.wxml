@@ -1,0 +1,14 @@
+<!--pages/create/create.wxml-->
+<view class="page ctn">
+  <view class="head ctn">
+    <text class="title line">新建一份表白</text>
+  </view>
+  <view class="body ctn">
+      <input class="object box" placeholder="表白对象" />
+      <textarea class="object box" placeholder="表白正文" />
+      <button class="btn" size='default' type="warn" bindtap='profess'>表白</button>
+  </view>
+  <view class="foot ctn">
+    <detail />
+  </view>
+</view>

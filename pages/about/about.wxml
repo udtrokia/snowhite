@@ -1,0 +1,13 @@
+<!--pages/about/about.wxml-->
+<view class="page ctn">
+  <view class="head ctn">
+    <text class="title line">小表白</text>
+    <text>
+       只需使用3分钟，你就能创建一份不可篡改的表白，微信唯一 ID 和区块链技术，保证内容真是可信，表白内容可靠。资深律师合作，随时提供电子证据保全。
+    </text>
+  </view>
+  <view class="foot ctn">
+    <detail />
+  </view>
+</view>
+

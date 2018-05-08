@@ -1,0 +1,2 @@
+<!--components/detail.wxml-->
+<text class="prompt" bindtap='snowhite'>进一步了解小表白</text>

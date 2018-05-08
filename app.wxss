@@ -1,0 +1,77 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+/* page */
+.page{
+  height: 100vh;
+  width: 100vw;
+}
+.ctn{
+  display: flex;
+  flex-direction: column;
+}
+.line{
+  padding: 0.3rem 0;
+}
+margin{
+  margin: 1rem;
+}
+padding{
+  padding: 1rem;
+}
+
+/* head */
+.head{
+  align-items: flex-start;
+  margin: 1rem 1.2rem;
+}
+.title{
+  font-size: 1.2rem;
+}
+.subtitle{
+  font-size: 0.8rem;
+  color: #666;
+}
+
+
+
+/* body */
+.body{
+  align-items: center;
+}
+.object{
+  border-width: 1px;
+  border-radius: 0.33rem;
+  border-style: solid;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  width: 85vw;
+  box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, .2);
+}
+.btn{
+  margin: 1rem;
+  box-shadow: 2px 2px 1px 1px rgba(0, 0, 33, .2);
+}
+
+/* foot */
+.foot{
+  flex:1;
+  align-items: center;
+  margin: 1rem;
+}
+
+.prompt{
+  font-size: 0.6rem;
+  color: #999;
+}
+
+
+/* other */
