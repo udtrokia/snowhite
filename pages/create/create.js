@@ -1,87 +1,55 @@
 // pages/create/create.js
-const gun = require('../../utils/gun.js')();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    uint: "",
+    position: "",
+    advice: ""
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    console.log(gun.get("hello"))
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
+  bindKeyInput: function (e) {
+    var id = e.target.id;
+    var value = e.detail.value;
+    this.setData({
+      [id]: value
+    })
   },
   profess: function(){
-    wx.showModal({
-      title: '表白结果',
-      content: '对方拒绝了您的表白，并给您发了张好人卡',
-      showCancel: true,
-      cancelText: '继续表白',
-      cancelColor: '#f00',
-      confirmText: '放弃',
-      confirmColor: '',
+    var that = this;
+    wx.request({
+      url: 'http://localhost:8080/api/advices',
+      data: this.data,
+      header: {
+        "content-type": "application/json"
+      },
+      method: 'POST',
+      dataType: 'json',
+      responseType: 'text',
       success: function(res) {
-        if(res.cancel){
-          wx.showToast({
-            title: '你是个好人',
-          })
-        }
+        wx.showToast({
+          title: '提交成功',
+          icon: "success",
+        })
       },
       fail: function(res) {},
-      complete: function(res) {},
-    })
+      complete: function(res) {
+        that.setData({
+          uint: "",
+          position: "",
+          advice: ""
+        })
+      },
+    });
+  },
+  onShareAppMessage: function (res) {
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(res.target)
+    }
+    return {
+      path: '/pages/create/create'
+    }
   }
 })

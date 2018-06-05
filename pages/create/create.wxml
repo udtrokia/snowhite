@@ -1,14 +1,18 @@
 <!--pages/create/create.wxml-->
-<view class="page ctn">
+<scroll-view class="page ctn">
   <view class="head ctn">
-    <text class="title line">新建一份表白</text>
+    <text class="title line">有关分享会的建议</text>
   </view>
   <view class="body ctn">
-      <input class="object box" placeholder="表白对象" />
-      <textarea class="object box" placeholder="表白正文" />
-      <button class="btn" size='default' type="warn" bindtap='profess'>表白</button>
+      <input id="uint" bindinput="bindKeyInput" class="object box" placeholder="行业领域" placeholder-class='ph' 
+        value="{{uint}}"/>
+      <input id="position" bindinput="bindKeyInput" class="object box" placeholder="所处职位" placeholder-class='ph'
+        value="{{position}}"/>
+      <textarea id="advice" bindinput="bindKeyInput" class="object box" placeholder="相关意见" placeholder-class='ph'
+        value="{{advice}}"/>
+      <button class="btn" size='default'  bindtap='profess'>提交</button>
   </view>
-  <view class="foot ctn">
+  <!-- <view class="foot ctn">
     <detail />
-  </view>
-</view>
+  </view> -->
+</scroll-view>

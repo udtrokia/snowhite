@@ -1,6 +1,5 @@
 {
-  "disableScroll": true,
-  "navigationBarTitleText": "小表白",
+  "navigationBarTitleText": "苏州区块链线下分享会",
   "usingComponents": {
     "detail": "/components/detail/detail"
   }

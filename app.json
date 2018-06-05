@@ -1,28 +1,13 @@
 {
   "pages":[
-    "pages/mine/mine",
-    "pages/about/about",
     "pages/create/create",
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/mine/mine"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"black",
-    "navigationBarTitleText": "小表白"
-  },
-  "tabBar":{
-    "list": [{
-        "pagePath": "pages/mine/mine",
-        "text": "我的"
-      },{
-        "pagePath": "pages/create/create",
-        "text": "创建"
-      },{
-        "pagePath": "pages/about/about",
-        "text": "关于"
-      }]
+    "navigationBarTitleText": "苏州区块链线下分享会"
   }
 }
