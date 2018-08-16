@@ -1,10 +1,2 @@
 <!--pages/mine/mine.wxml-->
-<view class="page ctn">
-  <view class="head ctn">
-    <text class="title line">我的表白</text>
-    <text class="subtitle line">这里是和你相关的表白</text>
-  </view>
-  <view class="foot ctn">
-    <detail />
-  </view>
-</view>
+<view class="page ctn"></view>

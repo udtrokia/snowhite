@@ -1,5 +1,6 @@
 {
   "navigationBarTitleText": "苏州区块链线下分享会",
+  "backgroundColor": "#f7f7f7",
   "usingComponents": {
     "detail": "/components/detail/detail"
   }

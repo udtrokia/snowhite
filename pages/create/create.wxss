@@ -1,2 +1,9 @@
 /* pages/create/create.wxss */
-
+.picker{
+  color: rgba(78, 186, 169, .9);
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+}
+.static{
+  position: fixed;
+}

@@ -1,16 +1,23 @@
 <!--pages/create/create.wxml-->
 <scroll-view class="page ctn">
   <view class="head ctn">
-    <text class="title line">有关分享会的建议</text>
+    <text class="title line static">有关分享会的建议</text>
   </view>
   <view class="body ctn">
-      <input id="uint" bindinput="bindKeyInput" class="object box" placeholder="行业领域" placeholder-class='ph' 
-        value="{{uint}}"/>
-      <input id="position" bindinput="bindKeyInput" class="object box" placeholder="所处职位" placeholder-class='ph'
-        value="{{position}}"/>
-      <textarea id="advice" bindinput="bindKeyInput" class="object box" placeholder="相关意见" placeholder-class='ph'
+  <picker 
+    mode="multiSelector" 
+    bindchange="bindMultiPickerChange" 
+    value="{{multiIndex}}" range="{{multiArray}}"
+  >
+    <view class="picker">
+      当前选择：{{multiArray[0][multiIndex[0]]}} {{multiArray[1][multiIndex[1]]}}
+    </view> 
+  </picker>
+      <textarea 
+          id="advice" bindinput="bindKeyInput" 
+          class="object box" placeholder="相关建议" placeholder-class='ph'
         value="{{advice}}"/>
-      <button class="btn" size='default'  bindtap='profess'>提交</button>
+      <button class="btn" bindtap='profess'>提交</button>
   </view>
   <!-- <view class="foot ctn">
     <detail />
